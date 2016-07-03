@@ -4,3 +4,6 @@
 [submodule "trfBig"]
 	path = trfBig
 	url = https://github.com/remimarenco/trfBig
+[submodule "bamToBigwig"]
+	path = bamToBigwig
+	url = https://github.com/remimarenco/bamToBigwig
