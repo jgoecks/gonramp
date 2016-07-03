@@ -7,3 +7,6 @@
 [submodule "bamToBigwig"]
 	path = bamToBigwig
 	url = https://github.com/remimarenco/bamToBigwig
+[submodule "blastXmlToPsl"]
+	path = blastXmlToPsl
+	url = https://github.com/remimarenco/blastXmlToPsl
