@@ -10,3 +10,6 @@
 [submodule "blastXmlToPsl"]
 	path = blastXmlToPsl
 	url = https://github.com/remimarenco/blastXmlToPsl
+[submodule "hub-archive-creator"]
+	path = hub-archive-creator
+	url = https://github.com/goeckslab/hub-archive-creator
