@@ -1,3 +1,6 @@
 [submodule "pslToBed"]
 	path = pslToBed
 	url = https://github.com/remimarenco/pslToBed
+[submodule "trfBig"]
+	path = trfBig
+	url = https://github.com/remimarenco/trfBig
