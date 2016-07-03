@@ -1,4 +1,4 @@
-# gonramp
+# G-OnRamp
 
 This repository has been created for gathering all the G-OnRamp specifi resources, that could also be useful for the community:
 - Galaxy Tool Wrappers
