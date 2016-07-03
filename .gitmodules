@@ -1,0 +1,3 @@
+[submodule "pslToBed"]
+	path = pslToBed
+	url = https://github.com/remimarenco/pslToBed
