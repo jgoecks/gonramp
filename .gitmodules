@@ -16,3 +16,6 @@
 [submodule "glimmerhmm"]
 	path = glimmerhmm
 	url = https://github.com/remimarenco/glimmerhmm
+[submodule "multi_fasta_glimmerhmm"]
+	path = multi_fasta_glimmerhmm
+	url = https://github.com/remimarenco/multi_fasta_glimmerhmm
