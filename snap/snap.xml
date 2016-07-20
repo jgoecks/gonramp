@@ -5,7 +5,7 @@
         <exit_code range="1:" />
     </stdio>
     <command><![CDATA[
-        snap
+        $__tool_directory__/snap
         #if $settings.advanced == "advanced"
         $settings.lcmask
             #if $settings.strand == "true"
@@ -24,69 +24,69 @@
     ]]></command>
     <inputs>
         <param type="data" name="input1" format="dna.gz" />
-	<param name="organism" label="Model Organism" type="select" multiple="false" format="text" help="Choose a specialised trainingset.">
-        <option value="A.gambiae.hmm">A.gambiae</option>
-        <option value="A.mellifera.hmm">A.mellifera</option>
-        <option value="A.thaliana.hmm">Arabidopsis thaliana</option>
-        <option value="Acanium.hmm">Acanium</option>
-        <option value="At.hmm">Thale</option>
-		<option value="B.malayi.hmm">Brugia</option>
-        <option value="B.mori.hmm">B.mori</option>
-        <option value="C.elegans.hmm">C.elegans</option>
-        <option value="C.intestinalis.hmm">Ciona</option>
-        <option value="Ce.hmm">Ce</option>
-		<option value="D.melanogaster.hmm">Drosophila melanogaster</option>
-        <option value="Dm.hmm">Dm</option>
-        <option value="ixodesA.hmm">ixodesA</option>
-        <option value="ixodesB.hmm">ixodesB</option>
-        <option value="mam39-ro.hmm">mam39-ro</option>
-        <option value="mam39.hmm">mam39</option>
-        <option value="mam46-ro.hmm">mam46-ro</option>
-        <option value="mam46.hmm">mam46</option>
-        <option value="mam54-ro.hmm">mam54-ro</option>
-        <option value="mam54.hmm">mam54</option>
-        <option value="mamiso.hmm">mamiso</option>
-        <option value="minimal.hmm">minimal</option>
-        <option value="Nasonia.hmm">Nasonia</option>
-        <option value="nGASP.hmm">nGASP</option>
-        <option value="nGASPr.hmm">nGASPr</option>
-        <option value="O.sativa.hmm">O.sativa</option>
-        <option value="Os.hmm">Os</option>
-	</param>
-	<param name="format" label="output format setting" type="select" multiple="false" format="text" help="Choose a output format.">
-		<option value="-gff">GFF</option>
-		<option value="-ace">ACE</option>
-	</param>
-    <param name="proteins" type="select" label="Create FASTA file of proteins">
-        <option value="-aa">Yes</option>
-        <option value="">No</option>
-    </param>
-    <param name="transcripts" type="select" label="Create FASTA file of transcripts">
-        <option value="-tx">Yes</option>
-        <option value="">No</option>
-    </param>
-    <conditional name="settings">
-        <param name="advanced" type="select" label="Specify advanced parameters">
-            <option value="simple" selected="true">No, use program defaults.</option>
-            <option value="advanced">Yes, see full parameter list.</option>
+        <param name="organism" label="Model Organism" type="select" multiple="false" format="text" help="Choose a specialised trainingset.">
+            <option value="A.gambiae.hmm">A.gambiae</option>
+            <option value="A.mellifera.hmm">A.mellifera</option>
+            <option value="A.thaliana.hmm">Arabidopsis thaliana</option>
+            <option value="Acanium.hmm">Acanium</option>
+            <option value="At.hmm">Thale</option>
+            <option value="B.malayi.hmm">Brugia</option>
+            <option value="B.mori.hmm">B.mori</option>
+            <option value="C.elegans.hmm">C.elegans</option>
+            <option value="C.intestinalis.hmm">Ciona</option>
+            <option value="Ce.hmm">Ce</option>
+            <option value="D.melanogaster.hmm">Drosophila melanogaster</option>
+            <option value="Dm.hmm">Dm</option>
+            <option value="ixodesA.hmm">ixodesA</option>
+            <option value="ixodesB.hmm">ixodesB</option>
+            <option value="mam39-ro.hmm">mam39-ro</option>
+            <option value="mam39.hmm">mam39</option>
+            <option value="mam46-ro.hmm">mam46-ro</option>
+            <option value="mam46.hmm">mam46</option>
+            <option value="mam54-ro.hmm">mam54-ro</option>
+            <option value="mam54.hmm">mam54</option>
+            <option value="mamiso.hmm">mamiso</option>
+            <option value="minimal.hmm">minimal</option>
+            <option value="Nasonia.hmm">Nasonia</option>
+            <option value="nGASP.hmm">nGASP</option>
+            <option value="nGASPr.hmm">nGASPr</option>
+            <option value="O.sativa.hmm">O.sativa</option>
+            <option value="Os.hmm">Os</option>
         </param>
-        <when value="simple">
-        </when>
-        <when value="advanced">
-            <param name="lcmask" type="boolean" label="treat lowercase as N" truevalue="-lcmask" falsevalue="" />
-            <conditional name="strand">
-                <param name="strand" type="boolean" label="predict on one strand only" />
-                <when value="true">
+        <param name="format" label="output format setting" type="select" multiple="false" format="text" help="Choose a output format.">
+            <option value="-gff">GFF</option>
+            <option value="-ace">ACE</option>
+        </param>
+        <param name="proteins" type="select" label="Create FASTA file of proteins">
+            <option value="-aa">Yes</option>
+            <option value="">No</option>
+        </param>
+        <param name="transcripts" type="select" label="Create FASTA file of transcripts">
+            <option value="-tx">Yes</option>
+            <option value="">No</option>
+        </param>
+        <conditional name="settings">
+            <param name="advanced" type="select" label="Specify advanced parameters">
+                <option value="simple" selected="true">No, use program defaults.</option>
+                <option value="advanced">Yes, see full parameter list.</option>
+            </param>
+            <when value="simple">
+            </when>
+            <when value="advanced">
+                <param name="lcmask" type="boolean" label="treat lowercase as N" truevalue="-lcmask" falsevalue="" />
+                <conditional name="strand">
+                    <param name="strand" type="boolean" label="predict on one strand only" />
+                    <when value="true">
                     <param name="onestrand" type="select" label="Specify which strand to predict">
                         <option value="-plus">predict on plus strand only.</option>
                         <option value="-minus">predict on minus strand only.</option>
                     </param>
-                </when>
-                <when value="false">
-                </when>
-            </conditional>
-        </when>
-    </conditional>
+                    </when>
+                    <when value="false">
+                    </when>
+                </conditional>
+            </when>
+        </conditional>
     </inputs>
     <outputs>
         <data name="output1" format="gff" label="${tool.name} on ${on_string}: GTF/GFF">
@@ -96,7 +96,7 @@
         </data>
         <data name="output2" format="fasta" label="${tool.name} on ${on_string}: Protein sequence">
             <filter>proteins == "-aa"</filter>
-        </data>
+        </data>/Users/yating/Desktop/gonramp/snap-wrapper/thale.gff
         <data name="output3" format="fasta" label="${tool.name} on ${on_string}: Coding sequence">
             <filter>transcripts == "-tx"</filter>
         </data>
@@ -104,7 +104,8 @@
     <tests>
         <test>
             <param name="input1" value="thale.dna.gz"/>
-	    <param name="organism" value="At.hmm" />
+            <param name="organism" value="At.hmm" />
+            <param name="format" value="-gff" />
             <output name="output1" file="thale.gff"/>
         </test>
     </tests>
