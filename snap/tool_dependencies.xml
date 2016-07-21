@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="snap" version="0.1.0">
-        <install version="0.1.0">
+        <install version="1.0">
             <actions_group>
                 <actions>
                     <action type="download_by_url">http://korflab.ucdavis.edu/Software/snap-2013-11-29.tar.gz</action>
