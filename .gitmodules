@@ -19,3 +19,6 @@
 [submodule "multi_fasta_glimmerhmm"]
 	path = multi_fasta_glimmerhmm
 	url = https://github.com/remimarenco/multi_fasta_glimmerhmm
+[submodule "regtools"]
+	path = regtools
+	url = https://github.com/remimarenco/regtools
