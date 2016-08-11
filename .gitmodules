@@ -22,3 +22,6 @@
 [submodule "regtools"]
 	path = regtools
 	url = https://github.com/remimarenco/regtools
+[submodule "SNAP"]
+	path = SNAP
+	url = https://github.com/Yating-L/SNAP.git
